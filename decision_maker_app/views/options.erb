@@ -1,0 +1,98 @@
+<html>
+ <head>
+<h2>Options List</h2>
+         <style>
+   html {
+    background-color: #B27CCC;
+}
+
+h2 {
+    font-family: monospace;
+    background-color: #FFE3D4;
+    color: #772F99;
+    font-size: 55px;
+    text-align: center;
+    margin-top: 10%;
+    margin-left: 32%;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    width: 35%;
+    border-radius: 6px;
+}
+
+ #table{
+    font-family: monospace;
+    background-image: linear-gradient( #FFE3D4, #C9FFBA);
+    color: #772F99;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 34.5%;
+    margin-right: 100px;
+    margin-bottom: 60px;
+    padding-top: 2%;
+    width: 30%;
+    border-radius: 12px;
+}
+
+}
+body {
+    background-color: #B27CCC;
+    font-size: 20px;
+    color:#772F99;
+    text-align: center;
+}
+
+p {
+    font-family: monospace;
+    font-size: 15px;
+    color: #FFE3D4;
+    text-align: center;
+}
+
+form{
+    text-align: center;
+}
+input{
+    background-color: #FFE3D4;
+    font-size: 20px;
+    color:#772F99;
+    text-align: center;
+    border-radius: 12px;
+}
+input:hover {
+  transition-duration: 0.4s;
+  background-color: #7800A1;
+  color: #FFE3D4;
+}
+   </style>
+ </head>
+
+<body>
+ <div id="table">
+ <% @options2.each do |option| %>
+<%= option.name %><br>
+ <br>
+<% end %>
+     
+ </div>
+ </body>
+ 
+ <div class="buttons">
+ <form action = '/insert' method="POST">
+     <input type="text" name="option">
+     <input type="submit">
+ </form>
+ 
+ <br>
+ <form action = '/home' method="POST">
+     <input type="submit" value="Home">
+ </form>
+ <br>
+
+ <form action = '/go' method="POST">
+     <input type="submit" value="Go">
+ </form>
+ </div>
+ 
+ </html>
